@@ -1,43 +1,40 @@
 #container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:60vh 20vh;
-    grid-template-areas:    "E D"
-                            "R R";
-    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content{
+    padding: 0 2vw;
+}
+
+#pesquisa{
+    width: 100%;
+    height: 180px;
+    background: rgb(234, 8, 255);
+} 
+
+.card{
+    height: 200px;
+    background: red;
 }
     
-#esquerda{
-    grid-area: E;
-    background-color: red;
-    
-}
-    
-#direita{
-    grid-area: D;
-    background-color: green;
-    
-}
-    
-#rodape{
-    grid-area: R;
-    background-color: blue;
-    
-}
-    
-/* a media query será aplicada para ajustar o layout quando a tela for menor que 500px*/
-@media screen and (max-width: 500px) {
-    
+
+@media (max-width: 900px){
+
     #container{
-        grid-template-columns: 1fr;
-        grid-template-rows: 60vh 25vh;
-        grid-template-areas:    "D"
-                                "R";
+        grid-template-columns: repeat(2, 1fr); /*Quando ficar menor que 900 vira duas coluna*/
     }
-    
-    #esquerda{
-        display:none;    
+
+}
+
+@media (max-width: 600px){
+
+    #container{
+        grid-template-columns: 1fr; /*Quando ficar menor que 600 vira uma coluna*/
     }
 
 }
