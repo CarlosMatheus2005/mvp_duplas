@@ -1,0 +1,28 @@
+#container{
+    max-width: 450px;
+    margin: 60px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.usuario,
+.senha{
+    height: 50px;
+    background: #6fc3ff;
+    border-radius: 8px;
+}
+
+
+.buttons {
+    width: auto;
+    margin: 0 auto;
+    display: inline;
+}
+
+.action_btn {
+    width: auto;
+    margin: 0 auto;
+    display: inline;
+}
