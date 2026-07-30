@@ -1,0 +1,21 @@
+# Ambiente
+.env
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Banco de dados local
+db.sqlite3
+
+# Uploads de mídia (imagens de imóveis)
+media/
+
+# Django
+*.log
+staticfiles/
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
