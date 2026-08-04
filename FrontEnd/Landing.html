@@ -23,21 +23,113 @@
             
         </header>
             
-        <div id="pesquisa"></div>
+        <div id="pesquisa">
+            <div class="pesquisa-conteudo">
+
+                <h1 class="pesquisa-titulo">Encontre o lugar perfeito para sua próxima viagem</h1>
+                <div class="pesquisa-form">
+
+                    <div class="campo">
+                        <label for="cidade">Localização</label>
+                        <input type="text" id="cidade" placeholder="Para onde você vai?"> <!-- Input do tipo texto -->
+                    </div>
+
+                    <div class="campo">
+                        <label for="checkin">Check-in</label>
+                        <input type="date" id="checkin"> <!-- Input do tipo data -->
+                    </div>
+
+                    <div class="campo">
+                        <label for="checkout">Check-out</label>
+                        <input type="date" id="checkout">
+                    </div>
+
+                    <div class="campo">
+                        <label for="hospedes">Hóspedes</label>
+                        <input type="number" id="hospedes" min="1" value="1"> <!-- Input do tipo número -->
+                    </div>
+
+                    <div class="campo">
+                        <label for="preco">Preço máx.</label>
+                        <input type="range" id="preco" min="50" max="1000" value="500"> <!-- Input do tipo range (de tal até tal) -->
+                    </div>
+
+                    <button class="btn-filtrar">Filtrar</button>
+
+                </div>
+
+                <button class="btn-mapa">Ver no Mapa</button>
+            </div>
+        </div>
+
 
         <main class="content">
 
             <div id="container"> 
+                <div class="card">
 
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
+                    <!-- Primeiro vem a foto -->
+                    <div class="card-img">
+                        <img src="img/imovel1.jpg" alt="Refúgio na Montanha">
+                    </div>
+                    
+                    <!-- Depois vem as informações -->
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Refúgio na Montanha</h3>
+                            <span class="card-rating">★ 4.8</span>
+                        </div>
+                        <p class="card-local">Gramado, RS</p>
+                        <p class="card-hospedes">Até 4 hóspedes</p>
+                        <p class="card-preco"><strong>R$ 250</strong> / noite</p>
+                    </div>
+                    <!-- Como estamos sem JS e REACT ainda, é apenas o corpo do site, ele não funciona -->
+                </div>
 
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/imovel2.jpg" alt="Apto em Floripa">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Apto em Floripa</h3>
+                            <span class="card-rating">★ 4.5</span>
+                        </div>
+                        <p class="card-local">Florianópolis, SC</p>
+                        <p class="card-hospedes">Até 2 hóspedes</p>
+                        <p class="card-preco"><strong>R$ 180</strong> / noite</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/imovel3.jpg" alt="Casa de Praia">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Casa de Praia</h3>
+                            <span class="card-rating">★ 4.9</span>
+                        </div>
+                        <p class="card-local">Búzios, RJ</p>
+                        <p class="card-hospedes">Até 6 hóspedes</p>
+                        <p class="card-preco"><strong>R$ 420</strong> / noite</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/imovel4.jpg" alt="Chalé Aconchegante">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Chalé Aconchegante</h3>
+                            <span class="card-rating">★ 4.7</span>
+                        </div>
+                        <p class="card-local">Campos do Jordão, SP</p>
+                        <p class="card-hospedes">Até 3 hóspedes</p>
+                        <p class="card-preco"><strong>R$ 300</strong> / noite</p>
+                    </div>
+                </div>
 
             </div>
 

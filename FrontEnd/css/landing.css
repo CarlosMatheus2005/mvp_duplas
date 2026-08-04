@@ -7,87 +7,197 @@
     margin-bottom: 10px;
 }
 
+/* Aqui vai tá os trem da div de pesquisa */
 #pesquisa{
     width: 100%;
-    height: 180px;
-    background: rgb(234, 8, 255);
-} 
+    min-height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+
+    background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("../img/cabana.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pesquisa-conteudo{
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.pesquisa-titulo{
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.pesquisa-form{
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+    padding: 20px 24px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+    min-width: 140px;
+}
+
+/* textos da pesquisa */
+.campo label{
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.campo input{
+    padding: 10px 12px;
+    border: 1px solid #ccc; /* bloco do campo */
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.campo input:focus{
+    outline: none;
+    border-color: #5A8F8D;
+}
+
+.btn-filtrar{
+    background: #5A8F8D;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-filtrar:hover{
+    opacity: 0.9;
+}
+
+.btn-mapa{
+    margin-top: 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-mapa:hover{
+    background: rgba(255,255,255,0.15);
+}
+
+/* Aqui vai tá os cards de baixo */ 
+#container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
 .card{
-    height: 200px;
-    background: red;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
+.card:hover{
+    transform: translateY(-4px); /* Pra cima ou pra baixo o card*/
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5px auto; /* 15% from the top and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+.card-img{
+    width: 100%;
+    height: 160px;
 }
 
-/* The Close Button */
-.close {
-  /* Position it in the top right corner outside of the modal */
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-/* Close button on hover */
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
+.card-info{
+    padding: 12px 14px;
 }
 
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
+.card-header h3{
+    font-size: 16px;
 }
 
-@keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
+.card-rating{
+    font-size: 14px;
+    color: #333;
 }
-    
+
+.card-local,
+.card-hospedes{
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.card-preco{
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+.card-preco strong{
+    font-size: 17px;
+    color: #333;
+}
 
 @media (max-width: 900px){
-
     #container{
         grid-template-columns: repeat(2, 1fr); /*Quando ficar menor que 900 vira duas coluna*/
     }
 
+    .pesquisa-form{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .campo{
+        min-width: 100%;
+    }
 }
 
 @media (max-width: 600px){
-
     #container{
         grid-template-columns: 1fr; /*Quando ficar menor que 600 vira uma coluna*/
     }
 
+    .pesquisa-titulo{
+        font-size: 24px;
+    }
 }
