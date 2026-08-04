@@ -24,31 +24,38 @@
             
         </header>
             
-        <div id="pesquisa"></div>
-
         <main class="content">
 
-            <div id="container"> 
+            <form action="action_page.php" method="post">
 
-                <div class="usuario"></div>
-                <div class="senha"></div>
+                <div class="imgcontainer">
+                    <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+                </div>
 
-                <!-- Source - https://stackoverflow.com/q/52544089-->
-                <div class="buttons">
-                    <div class="action_btn">
-                        
-                        <button name="submit" class="action_btn submit" type="submit" 
-                        value="Save" onclick="myFunction()">Entrar</button>
-                        
-                        <button name="submit" class="action_btn cancel" type="submit" 
-                        value="Cancel" onclick="myFunction2()">Não possui Cadastro?</button>
+                <div class="container">
 
-                        <p id="saved"></p>
+                    <h1>Login</h1>
+                    <hr>
 
-                    </div>
+                    <label for="uname"><b>Email</b></label>
+                    <input type="text" placeholder="Entre com o Email" name="uname" required>
+
+                    <label for="psw"><b> Senha </b></label>
+                    <input type="password" placeholder="Entre com a Senha" name="psw" required>
+
+                    <button type="submit"> Entrar </button>
+                    
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Lembre-se de Mim
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" class="cancelbtn">Cancelar</button>
+                    <span class="psw">Não possui conta? <a href="Cadastro.html">Cadastre-se</a></span>
                 </div>
             
-            </div>
+            </form>
 
         </main>
 

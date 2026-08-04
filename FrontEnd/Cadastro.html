@@ -22,35 +22,42 @@
             </nav>
 
         </header>
-            
-        <div id="pesquisa"></div>
 
         <main class="content">
 
-            <div id="container"> 
+            <form action="action_page.php" method="post">
 
-                <div class="usuario"></div>
-                <div class="email"></div>
-                <div class="senha"></div>
-                <div class="repetir_senha"></div>
+                <div class="container">
+                    <h1>Cadastro</h1>
+                    <p>Preencha os dados abaixo para criar sua conta.</p>
+                    <hr>
 
-                <!-- Source - https://stackoverflow.com/q/52544089-->
-                <div class="buttons">
-                    <div class="action_btn">
-                        
-                        <button name="submit" class="action_btn submit" type="submit" 
-                        value="Save" onclick="myFunction()">Cadastrar</button>
-                        
-                        <button name="submit" class="action_btn cancel" type="submit" 
-                        value="Cancel" onclick="myFunction2()">Já possui Cadastro?</button>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Entre com o Email" name="email" required>
 
-                        <p id="saved"></p>
+                    <label for="psw"><b>Senha</b></label>
+                    <input type="password" placeholder="Entre com a Senha" name="psw" required>
 
+                    <label for="psw-repeat"><b>Repita a Senha</b></label>
+                    <input type="password" placeholder="Repita a Senha" name="psw-repeat" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Lembre-se de Mim
+                    </label>
+
+                    <p>Ao criar uma conta, você concorda com nossos <a href="#">Termos e Privacidade</a>.</p>
+
+                    <div class="clearfix">
+                        <button type="button" class="cancelbtn">Cancelar</button>
+                        <button type="submit" class="signupbtn">Cadastrar</button>
                     </div>
                 </div>
 
-            </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <span class="psw">Já tem uma conta? <a href="Login.html">Entre!</a></span>
+                </div>
 
+            </form>
         </main>
 
        <footer class="footer">

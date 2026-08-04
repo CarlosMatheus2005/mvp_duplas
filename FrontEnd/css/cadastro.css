@@ -7,23 +7,113 @@
     gap: 20px;
 }
 
-.usuario,
-.email,
-.senha,
-.repetir_senha{
-    height: 50px;
-    background: #6fc3ff;
-    border-radius: 8px;
+main.content{
+  display: flex;
+  justify-content: center;
+  padding: 40px 2vw;
 }
 
-.buttons {
-    width: auto;
-    margin: 0 auto;
-    display: inline;
+form {
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
-.action_btn {
-    width: auto;
-    margin: 0 auto;
-    display: inline;
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f1f1f1;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #fff;
+  border-color: #5A8F8D;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #5A8F8D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* Extra styles for the cancel button, mesmo cinza escuro do login */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #333;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 48%;
+}
+
+.signupbtn{
+  float: right;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px 24px;
+}
+
+.container p{
+  font-size: 13px;
+  color: #555;
+}
+
+.container a{
+  color: #5A8F8D;
+  text-decoration: none;
+}
+
+.container a:hover{
+  text-decoration: underline;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+span.psw {
+  display: block;
+  text-align: center;
+  padding-top: 4px;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+    float: none;
+  }
 }

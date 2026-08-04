@@ -7,22 +7,108 @@
     gap: 20px;
 }
 
-.usuario,
-.senha{
-    height: 50px;
-    background: #6fc3ff;
-    border-radius: 8px;
+main.content{
+  display: flex;
+  justify-content: center;
+  padding: 40px 2vw;
 }
 
-
-.buttons {
-    width: auto;
-    margin: 0 auto;
-    display: inline;
+/* Bordered form */
+form {
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden; 
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
-.action_btn {
-    width: auto;
-    margin: 0 auto;
-    display: inline;
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  border-color: #5A8F8D;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #5A8F8D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.85;
+}
+
+/* Extra style for the cancel button, agora usando o cinza escuro do header */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #333;
+  border-radius: 8px;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 25%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px 24px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+span.psw a{
+  color: #5A8F8D;
+  text-decoration: none;
+}
+
+span.psw a:hover{
+  text-decoration: underline;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
 }
