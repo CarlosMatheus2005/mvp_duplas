@@ -1,0 +1,86 @@
+.lista-alugueis{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.aluguel{
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.aluguel-img{
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.aluguel-info{
+    flex: 1;
+}
+
+.aluguel-info h3{
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.aluguel-local{
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.aluguel-datas{
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.aluguel-preco strong{
+    font-size: 15px;
+    color: #333;
+}
+
+.status{
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.status-pendente{
+    background: #fff3cd;
+    color: #8a6d00;
+}
+
+.status-aprovada{
+    background: #d4edda;
+    color: #1e7e34;
+}
+
+.status-recusada{
+    background: #f8d7da;
+    color: #b33;
+}
+
+@media (max-width: 700px){
+    .aluguel{
+        flex-wrap: wrap;
+    }
+
+    .status{
+        width: 100%;
+        text-align: center;
+    }
+}
